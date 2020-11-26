@@ -1,0 +1,17 @@
+{
+  "main": {
+    "home": "Trang chủ",
+    "reward": "Phần thưởng",
+    "settings": "Cài đặt",
+    "account": "Tài khoản"
+  },
+  "header": {
+    "title": "Ghi chú"
+  },
+  "body": {
+    "add": "Thêm ghi chú"
+  },
+  "settings": {
+    "title": "Ngôn ngữ"
+  }
+}
