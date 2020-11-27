@@ -1,0 +1,4 @@
+#Fri Nov 27 14:31:08 ICT 2020
+base.0=/Users/bhsoft/Desktop/NoteApp/android/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ToDoList.iml" filepath="$PROJECT_DIR$/.idea/modules/ToDoList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ToDoList.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ToDoList.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1263107024/ToDoList.react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/1263107024/ToDoList.react-native-community_masked-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/159172485/ToDoList.react-native-community_picker.iml" filepath="$PROJECT_DIR$/.idea/modules/159172485/ToDoList.react-native-community_picker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1396634375/ToDoList.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/1396634375/ToDoList.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/984557694/ToDoList.react-native-picker_picker.iml" filepath="$PROJECT_DIR$/.idea/modules/984557694/ToDoList.react-native-picker_picker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1507760720/ToDoList.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/-1507760720/ToDoList.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-81845816/ToDoList.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/-81845816/ToDoList.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-141328859/ToDoList.react-native-svg.iml" filepath="$PROJECT_DIR$/.idea/modules/-141328859/ToDoList.react-native-svg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/100162095/ToDoList.react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/100162095/ToDoList.react-native-vector-icons.iml" />
+    </modules>
+  </component>
+</project>

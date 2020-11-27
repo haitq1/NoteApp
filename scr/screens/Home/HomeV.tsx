@@ -1,14 +1,14 @@
-import React, {useState, useCallback, useMemo, useEffect} from 'react';
-import {View, FlatList, AsyncStorage, Alert, Text} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
+import React, { useState, useCallback, useMemo, useEffect } from "react";
+import { View, FlatList, AsyncStorage, Alert, Text } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
 
-import Header from '../components/Header';
-import ToDoItem from '../components/ToDoItem';
-import AddToDo from '../components/AddToDo';
-import styles from './Home.sty';
-import i18n from '../../localization/i18n';
-import {Switch} from 'react-native-switch';
-import { useTranslation } from 'react-i18next'
+import Header from "../components/Header";
+import ToDoItem from "../components/ToDoItem";
+import AddToDo from "../components/AddToDo";
+import styles from "./Home.sty";
+import i18n from "../../localization/i18n";
+import { Switch } from "react-native-switch";
+import { useTranslation } from "react-i18next";
 import {
   Add,
   Delete,
@@ -16,9 +16,10 @@ import {
   Complete,
   Language,
   logout,
-} from '../../redux/actions/Home.act';
-import {number} from 'yup';
-import SwitchSelector from 'react-native-switch-selector';
+} from "../../redux/actions/Home.act";
+import { number } from "yup";
+import SwitchSelector from "react-native-switch-selector";
+import { TextInput } from "react-native-gesture-handler";
 
 const useConnect = () => {
   const toDoList = useSelector((state: any) => state.home.toDoList);
@@ -33,7 +34,7 @@ const useConnect = () => {
       onEdit: (id: number, value2: string) => dispatch(Edit(id, value2)),
       onLanguage: (language: string) => dispatch(Language(language)),
     }),
-    [dispatch],
+    [dispatch]
   );
   return {
     ...mapState,
@@ -41,40 +42,34 @@ const useConnect = () => {
   };
 };
 const ToDoList = () => {
-  const {
-    toDoList,
-    onAdd,
-    onRemove,
-    onEdit,
-    onLanguage,
-  } = useConnect();
-  const [status, setStatus] = useState('');
-  const [status2, setStatus2] = useState('');
+  const { toDoList, onAdd, onRemove, onEdit, onLanguage } = useConnect();
+  const [status, setStatus] = useState("");
+  const [status2, setStatus2] = useState("");
   const dispatch = useDispatch();
   const submit = () => {
     dispatch(logout());
-    AsyncStorage.removeItem('token');
+    AsyncStorage.removeItem("token");
   };
   const AddSubmit = useCallback(() => {
     if (status.length > 0) {
       onAdd(status);
-      setStatus('');
+      setStatus("");
     }
   }, [onAdd, status]);
   const RemoveSubmit = useCallback(
     (id: number) => {
       onRemove(id);
     },
-    [onRemove],
+    [onRemove]
   );
   const EditSubmit = useCallback(
     (id: number) => {
       if (status2.length > 0) {
-        setStatus2('');
+        setStatus2("");
         onEdit(id, status2);
       }
     },
-    [onEdit, status2],
+    [onEdit, status2]
   );
   const handleItem = (status: string) => {
     setStatus(status);
@@ -82,15 +77,29 @@ const ToDoList = () => {
   const handleItem2 = (status2: string) => {
     setStatus2(status2);
   };
+  const [search, setSearch] = useState("");
+  const handleSearch = (text: string) => {
+    setSearch(text);
+  }
+  let data = toDoList;
+  useEffect(()=>{
+    data = data.filter((id:any ) => id.status == {search})
+  },[search])
   return (
     <View style={styles.container}>
       <Header submit={submit} />
       <View style={styles.content}>
         <AddToDo handleItem={handleItem} AddSubmit={AddSubmit} value={status} />
+        <TextInput
+          style={{ height: 40 }}
+          placeholder="Type here to translate!"
+          defaultValue={""}
+          onChangeText={handleSearch}
+        />
         <View style={styles.list}>
           <FlatList
-            data={toDoList}
-            renderItem={({item}) => (
+            data={data}
+            renderItem={({ item }) => (
               <ToDoItem
                 item={item}
                 RemoveSubmit={RemoveSubmit}
