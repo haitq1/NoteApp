@@ -1,60 +1,13 @@
 import * as React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
-import HomeVM from '../screens/Home/HomeVM';
 import {useTranslation} from 'react-i18next';
-import {useState, useCallback, useEffect, useMemo} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+
+import HomeVM from '../screens/Home/HomeVM';
+import AccountScreen from '../screens/Account/account'
 import SettingsScreen from '../screens/Settings/settings'
-
-function HomeScreen() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
-
-const RewardScreen = () => {
-  const {t} = useTranslation();
-  const total = useSelector((state: any) => state.home.total);
-  const completes = useSelector((state: any) => state.home.complete);
-  const uncompletes = useSelector((state: any) => state.home.uncomplete);
-  const completeText = 'Mục tiêu hoàn thành';
-  const uncompleteText = 'Mục tiêu chưa hoàn thành';
-  const totalText = 'Tổng số mục tiêu';
-  const [complete, setComplete] = useState(completeText);
-  const handleComplete = () => {
-    complete == completeText ? setComplete(completes) : setComplete(completeText);
-  };
-  const [uncomplete, setunComplete] = useState(uncompleteText);
-  const handleUncomplete = () => {
-    uncomplete == uncompleteText
-      ? setunComplete(uncompletes)
-      : setunComplete(uncompleteText);
-  };
-  const [totals, setTotals] = useState(totalText);
-  const handleTotal = () => {
-    totals == totalText ? setTotals(total) : setTotals(totalText);
-  };
-
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <TouchableOpacity style={{padding: 20}} onPress={handleComplete}>
-        <Text style={styles.bigblue}>{complete}</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={{padding: 20}} onPress={handleUncomplete}>
-        <Text style={styles.bigblue}>{uncomplete}</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={{padding: 20}} onPress={handleTotal}>
-        <Text style={styles.bigblue}>{totals}</Text>
-      </TouchableOpacity>
-    </View>
-  );
-};
-
+import RewardScreen from '../screens/Reward/reward'
 
 const Tab = createBottomTabNavigator();
 
@@ -111,20 +64,11 @@ const TabNavigator = () => {
           options={{
             title: t('main.account'),
           }}
-          component={HomeScreen}
+          component={AccountScreen}
         />
       </Tab.Navigator>
     </NavigationContainer>
   );
 };
-const styles = StyleSheet.create({
-  bigblue: {
-    color: 'black',
-    borderRadius: 30,
-    fontSize: 20,
-    borderColor: 'black',
-    borderWidth: 2,
-    padding: 20,
-  },
-});
+
 export default TabNavigator;

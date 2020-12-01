@@ -13,5 +13,10 @@
   },
   "settings": {
     "title": "Ngôn ngữ"
+  },
+  "reward": {
+    "complete": "Mục tiêu hoàn thành",
+    "uncomplete": "Mục tiêu chưa hoàn thành",
+    "total": "Tổng số mục tiêu"
   }
 }

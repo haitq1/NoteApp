@@ -10,7 +10,7 @@ import TabNavigator from './navigation/tabnav'
 
 const App = () => (
   <Provider store={store}>
-    <TabNavigator />
+    <Navigation />
   </Provider>
 );
 

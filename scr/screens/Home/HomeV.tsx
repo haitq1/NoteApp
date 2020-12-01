@@ -39,11 +39,6 @@ const ToDoList = () => {
   const { toDoList, onAdd, onRemove, onEdit, onLanguage } = useConnect();
   const [status, setStatus] = useState("");
   const [status2, setStatus2] = useState("");
-  const dispatch = useDispatch();
-  const submit = () => {
-    dispatch(logout());
-    AsyncStorage.removeItem("token");
-  };
   const AddSubmit = useCallback(() => {
     if (status.length > 0) {
       onAdd(status);
@@ -71,16 +66,11 @@ const ToDoList = () => {
   const handleItem2 = (status2: string) => {
     setStatus2(status2);
   };
-  const [search, setSearch] = useState("");
-  const query = "Alaska";
-  const handleSearch = (text: string) => {
-    setSearch(text);
-  };
 
   return (
     
       <View style={styles.container}>
-        <Header submit={submit} />
+        <Header  />
         <View style={styles.content}>
           <AddToDo
             handleItem={handleItem}

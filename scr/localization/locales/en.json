@@ -13,5 +13,10 @@
   },
   "settings": {
     "title": "Language"
+  },
+  "reward": {
+    "complete": "Complete Tasks",
+    "uncomplete": "Uncomplete Tasks",
+    "total": "Total Tasks"
   }
 }

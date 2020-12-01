@@ -17,6 +17,7 @@ MERGED from [:react-native-vector-icons] /Users/bhsoft/Desktop/NoteApp/node_modu
 MERGED from [com.facebook.react:react-native:0.63.3] /Users/bhsoft/.gradle/caches/transforms-2/files-2.1/c803ec0dd4d18c39e15a4a1a0faba9f7/jetified-react-native-0.63.3/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/bhsoft/.gradle/caches/transforms-2/files-2.1/20725fa20214e86eb8fa55394d5d409e/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [org.webkit:android-jsc:r245459] /Users/bhsoft/.gradle/caches/transforms-2/files-2.1/7909fc1527cbbfa5280fa34f69372979/jetified-android-jsc-r245459/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-linear-gradient] /Users/bhsoft/Desktop/NoteApp/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/bhsoft/.gradle/caches/transforms-2/files-2.1/74b5b53aa91915ee5dde98bfa25ed061/jetified-flipper-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:stetho:2.2.0] /Users/bhsoft/.gradle/caches/transforms-2/files-2.1/09dbe234547be9f337dc6face2c0c8c0/jetified-stetho-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fresco:2.2.0] /Users/bhsoft/.gradle/caches/transforms-2/files-2.1/4a0043afa441e7baec9bbcdb947f2198/jetified-fresco-2.2.0/AndroidManifest.xml:2:1-9:12
@@ -181,6 +182,8 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/bhsoft
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/bhsoft/.gradle/caches/transforms-2/files-2.1/20725fa20214e86eb8fa55394d5d409e/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [org.webkit:android-jsc:r245459] /Users/bhsoft/.gradle/caches/transforms-2/files-2.1/7909fc1527cbbfa5280fa34f69372979/jetified-android-jsc-r245459/AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] /Users/bhsoft/.gradle/caches/transforms-2/files-2.1/7909fc1527cbbfa5280fa34f69372979/jetified-android-jsc-r245459/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /Users/bhsoft/Desktop/NoteApp/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /Users/bhsoft/Desktop/NoteApp/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/bhsoft/.gradle/caches/transforms-2/files-2.1/74b5b53aa91915ee5dde98bfa25ed061/jetified-flipper-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/bhsoft/.gradle/caches/transforms-2/files-2.1/74b5b53aa91915ee5dde98bfa25ed061/jetified-flipper-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:stetho:2.2.0] /Users/bhsoft/.gradle/caches/transforms-2/files-2.1/09dbe234547be9f337dc6face2c0c8c0/jetified-stetho-2.2.0/AndroidManifest.xml:5:5-7:41
