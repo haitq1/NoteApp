@@ -1,11 +1,11 @@
-import * as types from '../constants/Home.const';
-import {LOGIN_SUCCESSED} from '../constants/Login.const';
-import produce from 'immer';
-import {AsyncStorage} from 'react-native';
+import * as types from "../constants/Home.const";
+import { LOGIN_SUCCESSED } from "../constants/Login.const";
+import produce from "immer";
+import { AsyncStorage } from "react-native";
 
 interface Props {
   isAuthenticated: boolean;
-  toDoList: Array<{id: number; status: string}>;
+  toDoList: Array<{ id: number; status: string }>;
   language: string;
   complete: number;
   uncomplete: number;
@@ -14,17 +14,20 @@ interface Props {
 
 const initialState: Props = {
   isAuthenticated: false,
-  toDoList: [],
-  language: 'vi',
+  toDoList: [
+    { id: 0, status: "New York" },
+    { id: 1, status: "Alaska" },
+  ],
+  language: "vi",
   complete: 0,
-  uncomplete: 0,
-  total: 0,
+  uncomplete: 2,
+  total: 2 ,
 };
 export const homeReducer = (state = initialState, action: any) =>
   produce(state, (draft) => {
     switch (action.type) {
       case types.LOGOUT:
-        AsyncStorage.removeItem('token');
+        AsyncStorage.removeItem("token");
         draft.isAuthenticated = false;
         break;
       case LOGIN_SUCCESSED:
@@ -42,7 +45,7 @@ export const homeReducer = (state = initialState, action: any) =>
           draft.uncomplete = 1;
         } else {
           const lastId = state.toDoList[state.toDoList.length - 1].id;
-          let list = [{id: lastId + 1, status: action.status}];
+          let list = [{ id: lastId + 1, status: action.status }];
           draft.toDoList = state.toDoList.concat(list);
           draft.total = state.total + 1;
           draft.uncomplete = state.uncomplete + 1;
@@ -68,7 +71,7 @@ export const homeReducer = (state = initialState, action: any) =>
           draft.toDoList = [];
         } else {
           let list5 = state.toDoList.filter((id) => id.id != action.id);
-          let list4 = [{id: action.id, status: action.status2}];
+          let list4 = [{ id: action.id, status: action.status2 }];
           draft.toDoList = list5.concat(list4);
         }
         break;

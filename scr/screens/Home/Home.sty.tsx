@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
     },
     list: {
         marginTop: 20,
-
-
+        marginBottom: 40,
+        paddingBottom : 100,
     },
     header: {
         height: 80,

@@ -1,24 +1,18 @@
 import React, { useState, useCallback, useMemo, useEffect } from "react";
-import { View, FlatList, AsyncStorage, Alert, Text } from "react-native";
+import { View, FlatList, AsyncStorage, ScrollView } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 
 import Header from "../components/Header";
 import ToDoItem from "../components/ToDoItem";
 import AddToDo from "../components/AddToDo";
 import styles from "./Home.sty";
-import i18n from "../../localization/i18n";
-import { Switch } from "react-native-switch";
-import { useTranslation } from "react-i18next";
 import {
   Add,
   Delete,
   Edit,
-  Complete,
   Language,
   logout,
 } from "../../redux/actions/Home.act";
-import { number } from "yup";
-import SwitchSelector from "react-native-switch-selector";
 import { TextInput } from "react-native-gesture-handler";
 
 const useConnect = () => {
@@ -78,41 +72,41 @@ const ToDoList = () => {
     setStatus2(status2);
   };
   const [search, setSearch] = useState("");
+  const query = "Alaska";
   const handleSearch = (text: string) => {
     setSearch(text);
-  }
-  let data = toDoList;
-  useEffect(()=>{
-    data = data.filter((id:any ) => id.status == {search})
-  },[search])
+  };
+
   return (
-    <View style={styles.container}>
-      <Header submit={submit} />
-      <View style={styles.content}>
-        <AddToDo handleItem={handleItem} AddSubmit={AddSubmit} value={status} />
-        <TextInput
-          style={{ height: 40 }}
-          placeholder="Type here to translate!"
-          defaultValue={""}
-          onChangeText={handleSearch}
-        />
-        <View style={styles.list}>
-          <FlatList
-            data={data}
-            renderItem={({ item }) => (
-              <ToDoItem
-                item={item}
-                RemoveSubmit={RemoveSubmit}
-                EditSubmit={EditSubmit}
-                value2={status2}
-                handleItem2={handleItem2}
-              />
-            )}
-            keyExtractor={(item) => item.id.toString()}
+    
+      <View style={styles.container}>
+        <Header submit={submit} />
+        <View style={styles.content}>
+          <AddToDo
+            handleItem={handleItem}
+            AddSubmit={AddSubmit}
+            value={status}
           />
+          <ScrollView>
+          <View style={styles.list}>
+            <FlatList
+              data={toDoList}
+              renderItem={({ item }) => (
+                <ToDoItem
+                  item={item}
+                  RemoveSubmit={RemoveSubmit}
+                  EditSubmit={EditSubmit}
+                  value2={status2}
+                  handleItem2={handleItem2}
+                />
+              )}
+              keyExtractor={(item) => item.id.toString()}
+            />
+          </View>
+          </ScrollView>
         </View>
       </View>
-    </View>
+    
   );
 };
 

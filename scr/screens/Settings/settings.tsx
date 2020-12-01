@@ -1,11 +1,7 @@
 import * as React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import {Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {useTranslation} from 'react-i18next';
 import {useState, useCallback, useEffect, useMemo} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {Language} from '../../redux/actions/Home.act';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 
 function SettingsScreen() {
   const {t, i18n} = useTranslation();

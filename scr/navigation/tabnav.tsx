@@ -1,15 +1,12 @@
 import * as React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
 import HomeVM from '../screens/Home/HomeVM';
 import {useTranslation} from 'react-i18next';
 import {useState, useCallback, useEffect, useMemo} from 'react';
-import {Picker} from '@react-native-picker/picker';
 import {useDispatch, useSelector} from 'react-redux';
-import {Language} from '../redux/actions/Home.act';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import SettingsScreen from '../screens/Settings/settings'
 
 function HomeScreen() {
