@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useState, useCallback, useEffect } from "react";
 import { useSelector } from "react-redux";
 
-const RewardScreen = () => {
+const RewardScreen = ({ navigation }: any) => {
   const { t } = useTranslation();
   const total = useSelector((state: any) => state.home.total);
   const completes = useSelector((state: any) => state.home.complete);
@@ -48,6 +48,9 @@ const RewardScreen = () => {
       </TouchableOpacity>
       <TouchableOpacity style={{ padding: 20 }} onPress={handleTotal}>
         <Text style={styles.bigblue}>{totals}</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={{ padding: 20 }} onPress={() => navigation.navigate('giftcode') } >
+        <Text style={styles.bigblue}>{"Nhận giftcode"}</Text>
       </TouchableOpacity>
     </View>
   );

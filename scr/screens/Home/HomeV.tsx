@@ -13,7 +13,6 @@ import {
   Language,
   logout,
 } from "../../redux/actions/Home.act";
-import { TextInput } from "react-native-gesture-handler";
 
 const useConnect = () => {
   const toDoList = useSelector((state: any) => state.home.toDoList);
