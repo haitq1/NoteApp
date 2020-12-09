@@ -25,7 +25,7 @@ function RewardStackScreen() {
         component={RewardScreen}
       />
       <HomeStack.Screen 
-      name="giftcode"
+      name="Gift code"
       component={GiftCodeScreen} />
     </HomeStack.Navigator>
   );

@@ -49,7 +49,7 @@ const RewardScreen = ({ navigation }: any) => {
       <TouchableOpacity style={{ padding: 20 }} onPress={handleTotal}>
         <Text style={styles.bigblue}>{totals}</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={{ padding: 20 }} onPress={() => navigation.navigate('giftcode') } >
+      <TouchableOpacity style={{ padding: 20 }} onPress={() => navigation.navigate('Gift code') } >
         <Text style={styles.bigblue}>{"Nhận giftcode"}</Text>
       </TouchableOpacity>
     </View>
